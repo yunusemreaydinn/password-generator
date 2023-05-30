@@ -1,24 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import PasswordStrengthBar from "./Components/PwStrengthBar/PasswordStrengthBar";
+import Input from "./Components/Input/Input";
+import Password from "./Components/Password/Password";
+import Theme from "./Components/Theme/Theme";
 
 function App() {
+
+  const [password, setPassword] = useState("");
+  const [darkMode, setDarkMode] = useState(false);
+
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+  };
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="main">
+      <h1 className="title">Random Password Generator</h1>
+
+      <Input password={password} setPassword={setPassword} />
+
+      <PasswordStrengthBar password={password} />
+
+      <Password password={password} />
+
     </div>
   );
 }

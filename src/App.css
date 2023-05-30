@@ -1,38 +1,112 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+hr {
+  opacity: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.main {
+  margin-left: 50px;
+  max-width: fit-content;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.password {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.password-form {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-direction: column;
+  padding: 30px;
+}
+
+.fade-in-out {
+  animation: fade-in-out 1s;
+}
+
+@keyframes fade-in-out {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.range-bar {
+  display: flex;
+  margin-bottom: 25px;
+  width: 400px;
+  justify-content: space-between;
+}
+
+.length {
+  font-size: 1.2rem;
+  font-weight: 200;
+  margin-right: 50px;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin: 5px 0;
+  max-width: fit-content;
+}
+
+input {
+  cursor: pointer;
+}
+
+.input-label {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 8px;
+}
+
+.labels {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.bottom-checkbox {
+  font-size: 1rem;
+}
+
+.bottom-label {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin-top: 50px;
+}
+
+button:hover {
+  background: #494949;
   color: white;
+  transition: all ease 0.3s;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.password-section {
+  padding-top: 50px;
+  display: flex;
+  gap: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.generated {
+  font-weight: bold;
 }
