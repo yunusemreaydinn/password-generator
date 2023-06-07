@@ -16,7 +16,7 @@ function App() {
   
   return (
       <div className="main">
-      <h1 className="title">Random Password Generator</h1>
+      <h2 className="title">Random Password Generator</h2>
 
       <Input password={password} setPassword={setPassword} />
 
