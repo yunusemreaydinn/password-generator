@@ -59,7 +59,6 @@ const CheckboxGroup: React.FC<CheckboxGroupProps> = ({
         />
         Include Lowercase
       </label>
-      <hr/>
     </div>
   );
 };

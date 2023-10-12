@@ -1,29 +1,19 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./App.css";
-import PasswordStrengthBar from "./Components/PwStrengthBar/PasswordStrengthBar";
-import Input from "./Components/Input/Input";
-import Password from "./Components/Password/Password";
 import Theme from "./Components/Theme/Theme";
+import Home from "./Pages/Home";
 
 function App() {
-
-  const [password, setPassword] = useState("");
   const [darkMode, setDarkMode] = useState(false);
 
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
   };
-  
+
   return (
-      <div className="main">
-      <h2 className="title">Random Password Generator</h2>
-
-      <Input password={password} setPassword={setPassword} />
-
-      <PasswordStrengthBar password={password} />
-
-      <Password password={password} />
-
+    <div className="main">
+      <Theme darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+      <Home />
     </div>
   );
 }

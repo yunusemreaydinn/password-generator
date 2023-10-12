@@ -2,15 +2,14 @@
 
 body {
   font-family: "Poppins", sans-serif;
-}
-
-hr {
-  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .main {
-  margin-left: 50px;
-  max-width: fit-content;
+  width: 960px;
 }
 
 .password {
@@ -47,9 +46,7 @@ hr {
 }
 
 .length {
-  font-size: 1.2rem;
-  font-weight: 200;
-  margin-right: 50px;
+  font-size: 1rem;
 }
 
 .checkbox-group {
@@ -67,8 +64,8 @@ input {
 }
 
 .input-label {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.3rem;
+  height: 1.3rem;
   margin-right: 8px;
 }
 
@@ -109,4 +106,52 @@ button:hover {
 
 .generated {
   font-weight: bold;
+}
+
+.theme {
+  display: flex;
+  justify-content: end;
+}
+
+.dark-mode {
+  background-color: #262626;
+  color: #ffffff;
+}
+
+.light-mode {
+  background-color: #ffffff;
+  color: #262626;
+}
+
+.theme-toggle {
+  width: 60px;
+  height: 30px;
+  background-color: #111;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+
+.theme-toggle.light {
+  background-color: #ddd;
+}
+
+.circle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #333;
+  position: absolute;
+  top: 50%;
+  left: 1px;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.theme-toggle.dark .circle {
+  transform: translateY(-50%) translateX(30px);
+  background-color: #fff;
 }
